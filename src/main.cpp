@@ -94,7 +94,7 @@ int main(int argc, char* argv[]) {
     std::cout << "  -> results/solicitudes_ordenadas.csv generado.\n\n";
 
     
-    std::cout << "[A4] Análisis empírico de tiempos:\n";
+    std::cout << "[A4] Analisis empirico de tiempos:\n";
 
     int tamanios[] = {1000, 3500, 7043};
     double tiempos[3];
@@ -123,7 +123,7 @@ int main(int argc, char* argv[]) {
     std::cout << "  +----------+------------+------------------+\n\n";
 
    
-    std::cout << "[A3] Búsqueda binaria recursiva — 5 consultas:\n";
+    std::cout << "[A3] Busqueda binaria recursiva — 5 consultas:\n";
 
     struct Consulta { std::string id; int k; };
     std::vector<Consulta> consultas = {
@@ -135,7 +135,7 @@ int main(int argc, char* argv[]) {
     };
 
     std::ofstream fBusq("results/busquedas_A.txt");
-    fBusq << "Resultados de búsqueda binaria recursiva\n";
+    fBusq << "Resultados de busqueda binaria recursiva\n";
     fBusq << "Arreglo ordenado por tenure DESCENDENTE\n";
     fBusq << "Consulta: primera solicitud con tenure >= k\n\n";
     fBusq << std::left
@@ -177,7 +177,7 @@ int main(int argc, char* argv[]) {
 
     fBusq.close();
     std::cout << "\n  -> results/busquedas_A.txt generado.\n\n";
-    std::cout << "=== Módulo A completado ===\n";
+    std::cout << " Modulo A completado \n";
 
     return 0;
 }

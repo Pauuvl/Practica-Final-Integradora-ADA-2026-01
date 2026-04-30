@@ -1,9 +1,10 @@
 # ADA_PF — Módulo A: Divide y Vencerás
 
 ## Integrantes
-- (Apellido1) — Módulo A  
-- (Apellido2) — Módulo B  
-- (Apellido3) — Módulo C  
+- Paulina Velásquez 
+- Helen Valentina Sanabria
+- Yilmar David Murillo
+- Nicolas Rodriguez
 
 ## Estructura del repositorio
 

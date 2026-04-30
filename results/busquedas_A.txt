@@ -1,0 +1,11 @@
+Resultados de búsqueda binaria recursiva
+Arreglo ordenado por tenure DESCENDENTE
+Consulta: primera solicitud con tenure >= k
+
+Consulta  k     customerID      tenure  Churn
+--------------------------------------------------
+Q_A01     72    5248-YGIJN      72      No
+Q_A02     60    5248-YGIJN      72      No
+Q_A03     45    5248-YGIJN      72      No
+Q_A04     30    5248-YGIJN      72      No
+Q_A05     12    5248-YGIJN      72      No
