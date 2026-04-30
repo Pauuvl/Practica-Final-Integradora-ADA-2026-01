@@ -1,4 +1,4 @@
-Resultados de búsqueda binaria recursiva
+Resultados de busqueda binaria recursiva
 Arreglo ordenado por tenure DESCENDENTE
 Consulta: primera solicitud con tenure >= k
 
