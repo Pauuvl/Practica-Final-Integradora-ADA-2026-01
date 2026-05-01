@@ -158,7 +158,7 @@ int main(int argc, char* argv[]) {
     for (const auto& c : consultas) {
         int idx = busquedaBinaria(solicitudes, 0, n - 1, c.k);
 
-        std::string custID  = (idx == -1) ? "NO ENCONTRADO" : solicitudes[idx].customerID;
+        std::string custID  = (idx == -1) ? "NO FUE ENCONTRADO" : solicitudes[idx].customerID;
         std::string tenureS = (idx == -1) ? "-"             : std::to_string(solicitudes[idx].tenure);
         std::string churnS  = (idx == -1) ? "-"             : (solicitudes[idx].churn ? "Yes" : "No");
 
