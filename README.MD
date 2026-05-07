@@ -1,4 +1,4 @@
-# ADA_PF — Módulo A: Divide y Vencerás
+# ADA_PF — Práctica Final Integradora
 
 ## Integrantes
 - Paulina Velásquez 
@@ -9,23 +9,24 @@
 ## Estructura del repositorio
 
 ```
-ADA_PF/
-├── README.md
+Practica-Final-Integradora-ADA-2026-01/
+├── .gitignore
+├── README.MD
 ├── data/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv   ← dataset (incluir aquí)
-├── results/                                     ← generado automáticamente
-│   ├── solicitudes_ordenadas.csv
-│   ├── busquedas_A.txt
-│   ├── mst_red.txt
-│   └── asignacion_bw.txt
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
+├── results/
+│   ├── solicitudes_ordenadas.csv        ← Módulo A
+│   ├── busquedas_A.txt                  ← Módulo A
+│   ├── mst_red.txt                      ← Módulo B
+│   └── asignacion_bw.txt                ← Módulo C (pendiente)
 ├── src/
-│   ├── parser.hpp / parser.cpp                  ← Módulo A: parseo CSV
-│   ├── mergesort.hpp / mergesort.cpp            ← Módulo A: MergeSort
-│   ├── binary_search.hpp / binary_search.cpp   ← Módulo A: búsqueda binaria
-│   ├── graph.hpp / graph.cpp                   ← Módulo B (pendiente)
-│   ├── kruskal.hpp / kruskal.cpp               ← Módulo B (pendiente)
-│   ├── knapsack.hpp / knapsack.cpp             ← Módulo C (pendiente)
-│   └── main.cpp                                ← orquestador del pipeline
+│   ├── parser.hpp / parser.cpp          ← Módulo A: parseo CSV
+│   ├── mergesort.hpp / mergesort.cpp    ← Módulo A: MergeSort
+│   ├── binary_search.hpp / binary_search.cpp ← Módulo A: búsqueda binaria
+│   ├── graph.hpp / graph.cpp            ← Módulo B: grafo K_20
+│   ├── kruskal.hpp / kruskal.cpp        ← Módulo B: Kruskal + Union-Find
+│   ├── knapsack.hpp / knapsack.cpp      ← Módulo C (pendiente)
+│   └── main.cpp                         ← orquestador del pipeline
 └── report/
     └── Informe.pdf
 ```
@@ -33,15 +34,21 @@ ADA_PF/
 ## Compilación
 
 ```bash
-g++ -std=c++17 -O2 -o ada_pf src/main.cpp src/parser.cpp src/mergesort.cpp src/binary_search.cpp
+g++ -std=c++17 -O2 -o ada_pf src/main.cpp src/parser.cpp src/mergesort.cpp src/binary_search.cpp src/graph.cpp src/kruskal.cpp
 ```
 
-> Cuando se agreguen los módulos B y C, añadir `src/graph.cpp src/kruskal.cpp src/knapsack.cpp` al comando.
+> Cuando se agregue el Módulo C, añadir `src/knapsack.cpp` al comando.
 
 ## Ejecución
 
+**Linux / macOS:**
 ```bash
 ./ada_pf data/WA_Fn-UseC_-Telco-Customer-Churn.csv
+```
+
+**Windows:**
+```bash
+ada_pf.exe data/WA_Fn-UseC_-Telco-Customer-Churn.csv
 ```
 
 El programa genera automáticamente todos los archivos en `results/`.
@@ -52,7 +59,7 @@ El programa genera automáticamente todos los archivos en `results/`.
 - Sistema operativo: Linux / macOS / Windows (con MinGW o WSL)
 - Dataset: `WA_Fn-UseC_-Telco-Customer-Churn.csv` en la carpeta `data/`
 
-## Valores de referencia (verificación Módulo A)
+## Valores de referencia
 
 | Propiedad | Valor esperado |
 |-----------|---------------|
@@ -61,6 +68,8 @@ El programa genera automáticamente todos los archivos en `results/`.
 | Registros Churn = No | 5,174 |
 | tenure máximo | 72 |
 | tenure mínimo | 0 |
+| Aristas MST | 19 |
+| Peso total MST | 2,393.00 |
 
 ## Dataset
 
