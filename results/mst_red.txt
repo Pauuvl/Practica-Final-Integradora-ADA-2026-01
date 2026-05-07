@@ -4,6 +4,7 @@
 
 Grafo: 20 nodos, 190 aristas
 Peso total del MST: 2393.00
+Costo promedio de arista: 12.59
 
 --- Aristas del MST ---
 Orden u     v     peso

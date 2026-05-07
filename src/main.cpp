@@ -174,14 +174,17 @@ int main(int argc, char* argv[]) {
 
     std::cout<< "[B2] Ejecutando Kruskal...\n";
     ResultadoMST mst= kruskal(grafo);
-    std::cout<< "Aristas en el MST : "<< mst.aristas.size() << "\n";
-    std::cout<< "Peso total del MST: "<< std::fixed << std::setprecision(2) << mst.pesoTotal << "\n\n";
+    double costoPromedio= mst.pesoTotal / grafo.numAristas;
+    std::cout<< "Aristas en el MST :"<< mst.aristas.size() <<"\n";
+    std::cout<< "Peso total del MST:"<< std::fixed << std::setprecision(2) << mst.pesoTotal << "\n";
+    std::cout<< "Costo promedio de arista (grafo completo): " << std::fixed << std::setprecision(2)<< costoPromedio <<"\n\n";
 
     //Escribe los resultados en mst_red.txt
     std::ofstream fMST("results/mst_red.txt");
     fMST<< "\n\n=== Modulo B - Red de Minimo Costo (Kruskal) ===\n\n";
-    fMST<< "Grafo: "<< grafo.numNodos <<" nodos, "<< grafo.numAristas << " aristas\n";
-    fMST<< "Peso total del MST: " << std::fixed << std::setprecision(2) << mst.pesoTotal << "\n\n";
+    fMST<< "Grafo: "<< grafo.numNodos<<" nodos, "<< grafo.numAristas <<" aristas\n";
+    fMST<< "Peso total del MST: "<< std::fixed << std::setprecision(2)<< mst.pesoTotal<< "\n";
+    fMST<< "Costo promedio de arista: " << std::fixed << std::setprecision(2) << costoPromedio << "\n\n";
     fMST<< "--- Aristas del MST ---\n";
     fMST<< std::left << std::setw(6) << "Orden" << std::setw(6) << "u" << std::setw(6) << "v" << "peso\n";
     fMST<< std::string(22, '-') << "\n";
