@@ -11,6 +11,7 @@
 ```
 ADA_PF_Velasquez_Sanabria_Murillo_Rodriguez/
 ├── README.md
+├── .gitignore
 ├── data/
 │   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 ├── results/
